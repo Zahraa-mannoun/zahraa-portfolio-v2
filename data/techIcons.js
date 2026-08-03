@@ -30,10 +30,6 @@ import {
   SiGoogleanalytics,
 } from 'react-icons/si'
 
-// Shared tech -> {icon, color} lookup, reusing the same icons/colors as the
-// Skills section wherever the two overlap. A few project stack entries (VADER
-// NLP, Room DB) don't have a real brand mark in react-icons, so they fall back
-// to a null icon and get a generic badge instead of a mismatched logo.
 export const techIcons = {
   Python: { icon: SiPython, color: '#3776AB' },
   FastAPI: { icon: SiFastapi, color: '#009688' },

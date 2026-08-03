@@ -2,11 +2,6 @@ import { useEffect, useState } from 'react'
 
 const SECTION_IDS = ['hero', 'about', 'skills', 'projects', 'experience', 'contact']
 
-// Tracks which section is currently in view so the navbar can highlight the
-// matching link. Uses a thin horizontal band near the vertical center of the
-// viewport (via rootMargin) rather than the default "any part visible" check —
-// that's what keeps only one section active at a time instead of several
-// competing while a tall section is still mostly on screen.
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState(SECTION_IDS[0])
 
@@ -22,9 +17,14 @@ export function useActiveSection() {
         const topMost = visible.reduce((closest, entry) =>
           entry.boundingClientRect.top < closest.boundingClientRect.top ? entry : closest,
         )
-        setActiveSection(topMost.target.id)
+
+        const id = topMost.target.id
+        setActiveSection(id)
+        if (window.location.hash !== `#${id}`) {
+          history.replaceState(null, '', `#${id}`)
+        }
       },
-      { rootMargin: '-45% 0px -45% 0px', threshold: 0 },
+      { threshold: 0.4 },
     )
 
     sections.forEach((section) => observer.observe(section))

@@ -43,8 +43,7 @@ const hospitalityPlatformShot4 = '/assets/projects/hospitality-platform/Screensh
 const hospitalityPlatformShot5 = '/assets/projects/hospitality-platform/Screenshot_2026-08-02_190612.png'
 const hospitalityPlatformShot6 = '/assets/projects/hospitality-platform/Screenshot_2026-08-02_190636.png'
 
-// Presentational only — not part of the core project data, kept separate so
-// Projects.jsx and ProjectDetail.jsx can share the same placeholder gradient per project.
+
 export const gradientMap = {
   'taxigo-ai': 'from-accent to-[#241d66]',
   sentimentscope: 'from-emerald-500 to-emerald-800',

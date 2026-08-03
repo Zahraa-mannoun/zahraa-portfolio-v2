@@ -30,13 +30,35 @@ function getInitialTheme() {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
+// Measures the real navbar height at click time (rather than assuming a
+// fixed value) since it can render at a different height on mobile vs
+// desktop, then does the scrollTo manually — scrollIntoView's scroll-margin
+// offset was landing correctly on desktop but drifting on mobile.
+function scrollToSection(id) {
+  const element = document.getElementById(id)
+  if (!element) return
+  const navbar = document.querySelector('header')
+  const offset = (navbar?.getBoundingClientRect().height ?? 61) + 20
+  const elementTop = element.getBoundingClientRect().top + window.scrollY
+  window.scrollTo({ top: elementTop - offset, behavior: 'smooth' })
+}
+
 function NavItem({ to, isActive, className, onClick, children }) {
   const pathname = usePathname()
 
   const handleClick = (event) => {
     if (pathname === '/') {
       event.preventDefault()
-      document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' })
+      if (onClick) {
+        // Mobile menu items also close the dropdown, whose collapse
+        // animation shifts the page layout for ~300ms — measuring/scrolling
+        // before that settles is what was landing mid-section. Closing
+        // first and waiting it out fixes it.
+        onClick()
+        setTimeout(() => scrollToSection(to), 320)
+        return
+      }
+      scrollToSection(to)
     } else {
       sessionStorage.setItem('scrollTarget', to)
     }
