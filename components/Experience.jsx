@@ -112,7 +112,7 @@ function Timeline({ entries }) {
 
 function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 sm:py-24 md:px-12">
+    <section id="experience" className="mx-auto max-w-6xl scroll-mt-28 px-6 py-16 sm:py-24 md:px-12">
       <motion.h2
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

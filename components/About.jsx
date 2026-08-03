@@ -66,7 +66,7 @@ function About() {
   }, [])
 
   return (
-    <section id="about" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 sm:py-24 md:px-12">
+    <section id="about" className="mx-auto max-w-6xl scroll-mt-28 px-6 py-16 sm:py-24 md:px-12">
       <motion.div
         variants={container}
         initial="hidden"

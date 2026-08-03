@@ -45,6 +45,7 @@ function ProjectCard({ project }) {
             src={project.images[0]}
             alt={project.name}
             fill
+            loading="eager"
             sizes="(min-width: 640px) 320px, 280px"
             className="rounded-t-2xl object-cover"
           />
@@ -120,7 +121,6 @@ function ProjectCard({ project }) {
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('All Projects')
   const scrollRef = useRef(null)
-  const gridSectionRef = useRef(null)
 
   const visibleProjects =
     activeFilter === 'All Projects'
@@ -133,11 +133,11 @@ function Projects() {
 
   const handleViewAllProjects = () => {
     setActiveFilter('All Projects')
-    gridSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById('projects-grid')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <section id="projects" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16 sm:py-24 md:px-12">
+    <section id="projects" className="mx-auto max-w-7xl scroll-mt-28 px-6 py-16 sm:py-24 md:px-12">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -180,7 +180,7 @@ function Projects() {
           </div>
         </motion.div>
 
-        <div className="min-w-0" ref={gridSectionRef}>
+        <div id="projects-grid" className="min-w-0 scroll-mt-28">
           <div className="flex flex-wrap gap-2">
             {filters.map((filter) => (
               <button

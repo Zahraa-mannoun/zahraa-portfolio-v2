@@ -35,6 +35,8 @@ function ProjectDetail() {
           <h1 className="font-dm-serif text-3xl text-ink">Project not found</h1>
           <Link
             href="/#projects"
+          scroll={false}
+          onClick={() => sessionStorage.setItem('scrollTarget', 'projects')}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-90"
           >
             <ArrowLeft size={15} />
@@ -63,6 +65,8 @@ function ProjectDetail() {
       <div className="mx-auto max-w-7xl">
         <Link
           href="/#projects"
+          scroll={false}
+          onClick={() => sessionStorage.setItem('scrollTarget', 'projects')}
           className="inline-flex items-center gap-2 text-sm font-medium text-ink/70 transition-colors hover:text-accent dark:text-gray-300 dark:hover:text-accent"
         >
           <ArrowLeft size={16} />

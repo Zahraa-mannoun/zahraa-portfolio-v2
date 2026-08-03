@@ -158,7 +158,7 @@ export const projects = [
     role: 'Solo Developer',
     year: '2024',
     description:
-      'A solo-built online reservation platform for Lebanese University where students, faculty, and guests can browse and book university facilities including football fields, basketball courts, tennis courts, a pool, and conference rooms.',
+      'A solo built online reservation platform for Lebanese University where students, faculty, and guests can browse and book university facilities including football fields, basketball courts, tennis courts, a pool, and conference rooms.',
     stack: [
       'C#',
       'ASP.NET',
@@ -186,7 +186,7 @@ export const projects = [
       'Virtual payment system with coupon number generation',
       'User profiles showing booking status and rejection reasons',
       'Double booking prevention and maintenance status system',
-      'Role-based discount system: students vs faculty vs guests',
+      'Role based discount system: students vs faculty vs guests',
       'Full admin dashboard for resources, bookings, discounts and invoices',
       'Complete database design: conceptual, logical and physical models',
     ],
@@ -195,7 +195,7 @@ export const projects = [
       'Database schema design with SQL Server (conceptual, logical, physical)',
       'ASP.NET Razor Pages and C# backend development',
       'Business logic implementation: payment windows, auto-rejection, conflict detection',
-      'Role-based access control and user management',
+      'Role based access control and user management',
       'Admin dashboard design and invoice tracking',
     ],
   },
@@ -209,7 +209,7 @@ export const projects = [
     role: 'Solo Developer',
     year: '2026',
     description:
-      'A native Android ride-booking application built with Java, featuring an offline-first architecture powered by Room database. The app handles booking management, conflict detection, and a clean RecyclerView-driven UI with Material Design components.',
+      'A native Android ride booking application built with Java, featuring an offline first architecture powered by Room database. The app handles booking management, conflict detection, and a clean RecyclerView driven UI with Material Design components.',
     stack: ['Java', 'Android', 'Room DB', 'SQLite', 'RecyclerView', 'Material Design'],
     github: null,
     live: null,
@@ -224,16 +224,16 @@ export const projects = [
       taxigoAndroidClientData,
     ],
     highlights: [
-      'Offline-first architecture with Room DB for local data persistence',
+      'Offline first architecture with Room DB for local data persistence',
       'Smart conflict detection to prevent double bookings',
-      'RecyclerView-driven dynamic UI for booking lists',
+      'RecyclerView driven dynamic UI for booking lists',
       'Material Design components for a native Android feel',
       'SQLite local database with full CRUD operations',
       'Clean MVC architecture with separation of concerns',
     ],
     learned: [
       'Native Android development with Java from scratch',
-      'Offline-first design patterns with Room DB and SQLite',
+      'Offline first design patterns with Room DB and SQLite',
       'RecyclerView, adapters, and ViewHolder patterns',
       'Material Design UI components and Android layouts',
       'Conflict detection logic and local data sync strategies',
@@ -253,7 +253,7 @@ export const projects = [
     year: '2026',
     highlightsTitle: 'Some of My Contributions',
     description:
-      'A luxury hospitality platform serving yacht bookings, events, and restaurant reservations — built during my internship at Fekrat Al Youm Technologies (Remote, Dubai, June–July 2026).',
+      'A luxury hospitality platform serving yacht bookings, events, and restaurant reservations  built during my internship at Fekrat Al Youm Technologies (Remote, Dubai, June–July 2026).',
     stack: [
       'NestJS',
       'Next.js',
@@ -283,7 +283,7 @@ export const projects = [
     ],
     highlights: [
       'Developed RESTful API endpoints with NestJS and TypeScript for yacht bookings, events, and restaurant reservations',
-      'Built a full virtual wallet payment system with balance management, top-up flows, and transaction tracking linked to bookings',
+      'Built a full virtual wallet payment system with balance management, top up flows, and transaction tracking linked to bookings',
       'Implemented dual authentication (cookie-based and JWT) across multiple backend modules including bookings, reviews, enquiries, and favorites',
       'Designed PostgreSQL schemas with Prisma ORM on Supabase including migrations, foreign key relations, and connection optimization',
       'Built responsive UI pages and reusable React components with Next.js and Tailwind CSS v4 including wallet dashboard and bookings management',

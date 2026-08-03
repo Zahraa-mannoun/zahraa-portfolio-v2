@@ -139,7 +139,7 @@ function Skills() {
   }
 
   return (
-    <section id="skills" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6 sm:py-24 md:px-12">
+    <section id="skills" className="mx-auto max-w-6xl scroll-mt-28 px-4 py-16 sm:px-6 sm:py-24 md:px-12">
       <div className="rounded-2xl border border-[#e2e1e8] bg-white p-4 shadow-sm sm:p-6 md:p-8 dark:border-white/10 dark:bg-[#1a1a2e]">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#e2e1e8] pb-4 dark:border-white/10">
           <span className="font-space-mono text-sm font-semibold text-accent">

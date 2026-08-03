@@ -33,7 +33,7 @@ function Hero() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="mx-auto flex max-w-6xl scroll-mt-24 flex-col-reverse items-center gap-12 px-6 py-16 sm:gap-14 sm:py-20 md:flex-row md:justify-between md:px-12 md:py-32"
+      className="mx-auto flex max-w-6xl scroll-mt-24 flex-col-reverse items-center gap-12 px-6 pt-16 pb-32 sm:gap-14 sm:pt-20 md:flex-row md:justify-between md:px-12 md:pt-32"
     >
       <div className="max-w-2xl text-center md:text-left">
         <motion.span
@@ -88,6 +88,11 @@ function Hero() {
         >
           <Link
             href="/#projects"
+            scroll={false}
+            onClick={(event) => {
+              event.preventDefault()
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+            }}
             className="flex cursor-pointer items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
           >
             View My Work
@@ -193,7 +198,7 @@ function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
-          Open to Opportunities
+          <span>Open to Opportunities</span>
         </motion.div>
       </motion.div>
     </motion.section>

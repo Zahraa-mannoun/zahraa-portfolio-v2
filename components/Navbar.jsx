@@ -31,8 +31,20 @@ function getInitialTheme() {
 }
 
 function NavItem({ to, isActive, className, onClick, children }) {
+  const pathname = usePathname()
+
+  const handleClick = (event) => {
+    if (pathname === '/') {
+      event.preventDefault()
+      document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      sessionStorage.setItem('scrollTarget', to)
+    }
+    onClick?.()
+  }
+
   return (
-    <Link href={`/#${to}`} className={className} onClick={onClick}>
+    <Link href={`/#${to}`} scroll={false} className={className} onClick={handleClick}>
       <span className="relative inline-block">
         {children}
         {isActive && (

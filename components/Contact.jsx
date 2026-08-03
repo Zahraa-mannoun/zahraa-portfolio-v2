@@ -44,7 +44,7 @@ const contactItems = [
 const inputClass =
   'w-full rounded-lg border border-[#e2e1e8] bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink/40 outline-none transition-colors focus:border-accent dark:border-white/10 dark:bg-[#0f0f1a] dark:text-bg dark:placeholder:text-bg/40'
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@.]+$/
 
 function FieldError({ message }) {
   if (!message) return null
@@ -104,7 +104,7 @@ function Contact() {
 
   return (
     <>
-      <section id="contact" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 sm:py-24 md:px-12">
+      <section id="contact" className="mx-auto max-w-6xl scroll-mt-28 px-6 py-16 sm:py-24 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
