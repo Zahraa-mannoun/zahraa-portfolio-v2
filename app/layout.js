@@ -25,7 +25,28 @@ const spaceMono = Space_Mono({
 
 export const metadata = {
   title: 'Zahraa Mannoun — Full-Stack Software Engineer',
-  description: 'Full-Stack Software Engineer based in Beirut, Lebanon.',
+  description:
+    'Full-Stack Software Engineer based in Beirut, Lebanon. Building web, mobile and AI applications with React, Next.js, NestJS, FastAPI and more.',
+  keywords:
+    'Zahraa Mannoun, Full-Stack Developer, Software Engineer, Beirut, Lebanon, React, NestJS, FastAPI, Python, Android',
+  authors: [{ name: 'Zahraa Mannoun' }],
+  icons: {
+    icon: '/favicon.svg',
+  },
+  openGraph: {
+    title: 'Zahraa Mannoun — Full-Stack Software Engineer',
+    description: 'Full-Stack Software Engineer based in Beirut, Lebanon.',
+    url: 'https://www.zahraamannoun.com',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Zahraa Mannoun — Full-Stack Software Engineer',
+    description: 'Full-Stack Software Engineer based in Beirut, Lebanon.',
+  },
+  verification: {
+    google: 'google3ccfd3579c0fbfdc',
+  },
 }
 
 const themeInitScript = `
