@@ -45,7 +45,7 @@ export const metadata = {
     description: 'Full-Stack Software Engineer based in Beirut, Lebanon.',
   },
   verification: {
-    google: 'google3ccfd3579c0fbfdc',
+    google: 'IBFNMsySn6zeO-6YNV_EIeVPX0_0BVP8DYbTFYATOc0',
   },
 }
 
