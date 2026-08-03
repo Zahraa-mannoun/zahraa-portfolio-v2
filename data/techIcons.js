@@ -1,0 +1,77 @@
+import { FaReact, FaAndroid, FaJava } from 'react-icons/fa'
+import { DiMsqlServer } from 'react-icons/di'
+import {
+  SiPython,
+  SiFastapi,
+  SiGooglegemini,
+  SiSocketdotio,
+  SiSqlite,
+  SiReddit,
+  SiSharp,
+  SiDotnet,
+  SiNextdotjs,
+  SiNestjs,
+  SiPrisma,
+  SiPostgresql,
+  SiSqlalchemy,
+  SiChartdotjs,
+  SiDocker,
+  SiRailway,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTypescript,
+  SiSupabase,
+  SiShadcnui,
+  SiJsonwebtokens,
+  SiReact,
+  SiTailwindcss,
+  SiFramer,
+  SiGoogleanalytics,
+} from 'react-icons/si'
+
+// Shared tech -> {icon, color} lookup, reusing the same icons/colors as the
+// Skills section wherever the two overlap. A few project stack entries (VADER
+// NLP, Room DB) don't have a real brand mark in react-icons, so they fall back
+// to a null icon and get a generic badge instead of a mismatched logo.
+export const techIcons = {
+  Python: { icon: SiPython, color: '#3776AB' },
+  FastAPI: { icon: SiFastapi, color: '#009688' },
+  'Gemini 2.0': { icon: SiGooglegemini, color: '#8E75B2' },
+  'React.js': { icon: FaReact, color: '#61DAFB' },
+  'Socket.IO': { icon: SiSocketdotio, color: '#0f0f13' },
+  SQLite: { icon: SiSqlite, color: '#003B57' },
+  'VADER NLP': { icon: null, color: '#7C3AED' },
+  'Reddit API': { icon: SiReddit, color: '#FF4500' },
+  'C#': { icon: SiSharp, color: '#239120' },
+  'ASP.NET': { icon: SiDotnet, color: '#512BD4' },
+  'SQL Server': { icon: DiMsqlServer, color: '#CC2927' },
+  Android: { icon: FaAndroid, color: '#3DDC84' },
+  Java: { icon: FaJava, color: '#ED8B00' },
+  'Room DB': { icon: null, color: '#3DDC84' },
+  'Next.js': { icon: SiNextdotjs, color: '#0f0f13' },
+  NestJS: { icon: SiNestjs, color: '#E0234E' },
+  Prisma: { icon: SiPrisma, color: '#0f0f13' },
+  PostgreSQL: { icon: SiPostgresql, color: '#4169E1' },
+  SQLAlchemy: { icon: SiSqlalchemy, color: '#D71F00' },
+  'Chart.js': { icon: SiChartdotjs, color: '#FF6384' },
+  Docker: { icon: SiDocker, color: '#2496ED' },
+  Railway: { icon: SiRailway, color: '#0B0D0E' },
+  HTML5: { icon: SiHtml5, color: '#E34F26' },
+  CSS3: { icon: SiCss, color: '#1572B6' },
+  JavaScript: { icon: SiJavascript, color: '#F7DF1E' },
+  TypeScript: { icon: SiTypescript, color: '#3178C6' },
+  Supabase: { icon: SiSupabase, color: '#3ECF8E' },
+  'shadcn/ui': { icon: SiShadcnui, color: '#0f0f13' },
+  JWT: { icon: SiJsonwebtokens, color: '#000000' },
+  'React 19': { icon: SiReact, color: '#61DAFB' },
+  'Tailwind CSS': { icon: SiTailwindcss, color: '#06B6D4' },
+  'Framer Motion': { icon: SiFramer, color: '#0055FF' },
+  'Socket.io': { icon: SiSocketdotio, color: '#0f0f13' },
+  bcrypt: { icon: null, color: '#7C3AED' },
+  'Google Analytics': { icon: SiGoogleanalytics, color: '#E37400' },
+}
+
+export function getTechIcon(name) {
+  return techIcons[name] ?? { icon: null, color: '#4B3FCC' }
+}
