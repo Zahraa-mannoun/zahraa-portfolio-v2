@@ -9,8 +9,9 @@ import Navbar from '@/components/Navbar'
 const cert1 = '/assets/certificates/Screenshot_2026-08-01_192155.png'
 const cert2 = '/assets/certificates/Screenshot_2026-08-01_192245.png'
 const cert3 = '/assets/certificates/WhatsApp_Image_2026-01-29_at_8.36.21_PM.jpeg'
+const cert4 = '/assets/certificates/cert4_anthropic_claude101.png'
 
-const certificates = [cert1, cert2, cert3]
+const certificates = [cert1, cert2, cert3, cert4]
 
 const container = {
   hidden: {},
