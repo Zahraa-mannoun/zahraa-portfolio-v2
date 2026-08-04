@@ -6,7 +6,7 @@ import { FaReact, FaAndroid, FaBrain } from 'react-icons/fa'
 import { SiNestjs } from 'react-icons/si'
 
 const stats = [
-  { value: '2+', label: 'Years of Learning' },
+  { value: '5+', label: 'Years of Learning' },
   { value: '100+', label: 'Problems Solved' },
   { value: '20+', label: 'Technologies' },
   { value: '∞', label: 'Always Learning' },
@@ -163,7 +163,7 @@ function About() {
         </div>
 
         <motion.div variants={item} className="px-6 pb-8 sm:px-8 sm:pb-10 lg:px-12">
-          <div className="grid grid-cols-4 divide-x divide-[#f0e8d0] overflow-hidden rounded-2xl border border-[#f0e8d0] bg-[#faf3e0] dark:divide-bg/10 dark:border-bg/10 dark:bg-bg/5">
+          <div className="grid grid-cols-4 divide-x divide-[#dcd6fa] overflow-hidden rounded-2xl border border-[#dcd6fa] bg-[#EDE9FF] dark:divide-bg/10 dark:border-bg/10 dark:bg-bg/5">
             {stats.map(({ value, label }) => (
               <div key={label} className="px-2 py-6 text-center sm:px-6 sm:py-8">
                 <p className="font-sans text-2xl font-extrabold text-ink sm:text-4xl dark:text-bg">
