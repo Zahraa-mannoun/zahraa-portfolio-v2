@@ -99,7 +99,7 @@ function Hero() {
             <ArrowRight size={16} />
           </Link>
           <a
-            href="/resume.pdf"
+            href="/assets/CV/Zahraa_Mannoun_CV.pdf"
             download
             className="flex cursor-pointer items-center gap-2 rounded-full border border-ink bg-bg px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-ink/[0.03] dark:border-bg dark:bg-ink dark:text-bg dark:hover:bg-bg/[0.06]"
           >

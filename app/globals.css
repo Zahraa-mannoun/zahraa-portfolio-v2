@@ -60,11 +60,25 @@ body {
 
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #4B3FCC;
-  border-radius: 3px;
+  background: #4B3FCC;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3C3489;
+}
+
+.dark * {
+  scrollbar-color: #7F77DD transparent;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #7F77DD;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #4B3FCC;
 }
