@@ -6,12 +6,14 @@ import Image from 'next/image'
 import { ArrowLeft } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 
-const cert1 = '/assets/certificates/Screenshot_2026-08-01_192155.png'
-const cert2 = '/assets/certificates/Screenshot_2026-08-01_192245.png'
-const cert3 = '/assets/certificates/WhatsApp_Image_2026-01-29_at_8.36.21_PM.jpeg'
+const cert1 = '/assets/certificates/cert1_kanz_ai_hackathon.png'
+const cert2 = '/assets/certificates/cert2_alathea_academy_forensics.png'
+const cert3 = '/assets/certificates/cert3_semicolon_security_hackers.jpeg'
 const cert4 = '/assets/certificates/cert4_anthropic_claude101.png'
+const cert5 = '/assets/certificates/cert5_brinicle_ai_internship.png'
+const cert6 = '/assets/certificates/cert6_anthropic_claude_cowork.png'
 
-const certificates = [cert1, cert2, cert3, cert4]
+const certificates = [cert1, cert2, cert3, cert4, cert5, cert6]
 
 const container = {
   hidden: {},
