@@ -2,14 +2,18 @@
 
 import { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
-import { Briefcase, GraduationCap } from 'lucide-react'
+import { Briefcase, FileText, GraduationCap } from 'lucide-react'
 
 const experienceEntries = [
   {
-    date: 'June 2026 – July 2026',
-    title: 'Software Developer Intern',
+    date: 'June 2026 – August 2026',
+    title: 'Full-Stack Web Developer Intern',
     org: 'Fekrat Al Youm Technologies',
     location: 'Remote, Dubai',
+    link: {
+      href: '/assets/documents/Zahraa_Mannoun_Experience_Letter.pdf',
+      label: 'View Experience Letter',
+    },
     points: [
       'Developed RESTful API endpoints with NestJS and TypeScript for yacht bookings, events, and restaurant reservations',
       'Built a full virtual wallet payment system with balance management, top-up flows, and transaction tracking',
@@ -101,6 +105,18 @@ function Timeline({ entries }) {
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {entry.link && (
+                <a
+                  href={entry.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline"
+                >
+                  <FileText size={14} />
+                  {entry.link.label}
+                </a>
               )}
             </div>
           </motion.div>

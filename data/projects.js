@@ -247,12 +247,12 @@ export const projects = [
     subtitle: 'Internship Project at Fekrat Al Youm Technologies',
     internship: true,
     company: 'Fekrat Al Youm Technologies',
-    duration: 'June – July 2026',
-    role: 'Software Developer Intern',
+    duration: 'June – August 2026',
+    role: 'Full-Stack Web Developer Intern',
     year: '2026',
     highlightsTitle: 'Some of My Contributions',
     description:
-      'A luxury hospitality platform serving yacht bookings, events, and restaurant reservations  built during my internship at Fekrat Al Youm Technologies (Remote, Dubai, June–July 2026).',
+      'A luxury hospitality platform serving yacht bookings, events, and restaurant reservations  built during my internship at Fekrat Al Youm Technologies (Remote, Dubai, June–August 2026).',
     stack: [
       'NestJS',
       'Next.js',
