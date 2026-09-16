@@ -31,6 +31,11 @@ const card = {
 
 function ProjectCard({ project }) {
   const router = useRouter()
+  // Card thumbnail is independent of the detail-page gallery — most projects
+  // don't set `thumbnail` and just reuse the gallery's first image, but a
+  // project can opt into a dedicated card-only image (e.g. a cropped hero
+  // shot) without it also showing up in its own gallery.
+  const thumbnailSrc = project.thumbnail ?? project.images[0]
 
   return (
     <motion.div
@@ -40,12 +45,12 @@ function ProjectCard({ project }) {
       onClick={() => router.push(`/projects/${project.id}`)}
       className="w-[280px] shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-[#e2e1e8] bg-white shadow-md transition-colors hover:border-accent dark:border-gray-700 dark:bg-gray-900 sm:w-[320px]"
     >
-      {project.images[0] ? (
+      {thumbnailSrc ? (
         <div
           className={`relative aspect-video w-full ${project.imageFit === 'contain' ? 'bg-bg dark:bg-gray-800' : ''}`}
         >
           <Image
-            src={project.images[0]}
+            src={thumbnailSrc}
             alt={project.name}
             fill
             loading="eager"
@@ -104,8 +109,7 @@ function ProjectCard({ project }) {
               onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-1.5 text-xs font-medium text-accent transition-opacity hover:opacity-75"
             >
-              <span className="hidden sm:inline">View Details</span>
-              <span className="sm:hidden">Details</span>
+              View Details
               <ArrowRight size={13} />
             </Link>
           )}

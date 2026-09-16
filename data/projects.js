@@ -77,6 +77,7 @@ export const projects = [
     id: 'eduwallet',
     name: 'EduWallet',
     badge: null,
+    thumbnail: eduwalletHero,
     imageFit: 'contain',
     category: ['Full Stack', 'Mobile Apps'],
     subtitle: 'Fintech Digital Wallet for Student Tuition Payments',
@@ -106,7 +107,7 @@ export const projects = [
     github: 'https://github.com/Zahraa-mannoun/eduwallet',
     live: null,
     images: [
-      eduwalletHero,
+      eduwalletHero1,
       eduwalletShot2,
       eduwalletShot3,
       eduwalletShot4,
