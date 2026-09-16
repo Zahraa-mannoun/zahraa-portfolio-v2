@@ -28,6 +28,11 @@ import {
   SiTailwindcss,
   SiFramer,
   SiGoogleanalytics,
+  SiFastify,
+  SiNodedotjs,
+  SiExpo,
+  SiRedis,
+  SiVite,
 } from 'react-icons/si'
 
 export const techIcons = {
@@ -66,6 +71,13 @@ export const techIcons = {
   'Socket.io': { icon: SiSocketdotio, color: '#0f0f13' },
   bcrypt: { icon: null, color: '#7C3AED' },
   'Google Analytics': { icon: SiGoogleanalytics, color: '#E37400' },
+  Fastify: { icon: SiFastify, neutral: true },
+  'Node.js': { icon: SiNodedotjs, color: '#339933' },
+  React: { icon: SiReact, color: '#61DAFB' },
+  'React Native': { icon: SiReact, color: '#61DAFB' },
+  Expo: { icon: SiExpo, neutral: true },
+  Redis: { icon: SiRedis, color: '#DC382D' },
+  Vite: { icon: SiVite, color: '#646CFF' },
 }
 
 export function getTechIcon(name) {

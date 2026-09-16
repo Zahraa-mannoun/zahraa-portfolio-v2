@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ChevronRight, ExternalLink, FolderCheck, Layers, Clock } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
@@ -40,14 +41,16 @@ function ProjectCard({ project }) {
       className="w-[280px] shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-[#e2e1e8] bg-white shadow-md transition-colors hover:border-accent dark:border-gray-700 dark:bg-gray-900 sm:w-[320px]"
     >
       {project.images[0] ? (
-        <div className="relative aspect-video w-full">
+        <div
+          className={`relative aspect-video w-full ${project.imageFit === 'contain' ? 'bg-bg dark:bg-gray-800' : ''}`}
+        >
           <Image
             src={project.images[0]}
             alt={project.name}
             fill
             loading="eager"
             sizes="(min-width: 640px) 320px, 280px"
-            className="rounded-t-2xl object-cover"
+            className={`rounded-t-2xl ${project.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
           />
         </div>
       ) : (
@@ -92,10 +95,19 @@ function ProjectCard({ project }) {
               className="flex items-center gap-1.5 text-xs font-medium text-ink/70 transition-colors hover:text-accent dark:text-gray-300"
             >
               <ExternalLink size={13} />
-              Live Demo
+              <span className="hidden sm:inline">Live Demo</span>
+              <span className="sm:hidden">Demo</span>
             </a>
           ) : (
-            <span />
+            <Link
+              href={`/projects/${project.id}`}
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1.5 text-xs font-medium text-accent transition-opacity hover:opacity-75"
+            >
+              <span className="hidden sm:inline">View Details</span>
+              <span className="sm:hidden">Details</span>
+              <ArrowRight size={13} />
+            </Link>
           )}
 
           {project.github ? (

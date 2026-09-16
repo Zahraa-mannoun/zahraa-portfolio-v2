@@ -14,6 +14,7 @@ import {
   User,
   Calendar,
   Info,
+  TrendingUp,
 } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 import Navbar from '@/components/Navbar'
@@ -95,6 +96,20 @@ function ProjectDetail() {
             <p className="mt-4 text-sm leading-relaxed text-ink/70 dark:text-gray-300">
               {project.description}
             </p>
+
+            {project.impact && (
+              <div className="mt-4 flex items-start gap-3 rounded-xl bg-accent/10 p-4 dark:bg-accent/20">
+                <TrendingUp className="mt-0.5 shrink-0 text-accent" size={18} />
+                <div>
+                  <p className="font-space-mono text-xs font-semibold uppercase tracking-wider text-accent">
+                    Impact
+                  </p>
+                  <p className="mt-1.5 text-sm font-medium leading-relaxed text-ink dark:text-gray-100">
+                    {project.impact}
+                  </p>
+                </div>
+              </div>
+            )}
 
             <div className="mt-6 flex flex-col gap-3">
               {project.live && (
@@ -246,15 +261,20 @@ function ProjectDetail() {
             </h2>
             <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4">
               {project.stack.map((tech) => {
-                const { icon: Icon, color } = getTechIcon(tech)
+                const { icon: Icon, color, neutral } = getTechIcon(tech)
                 return (
                   <div key={tech} className="flex flex-col items-center gap-2 text-center">
                     <div
-                      className="flex h-12 w-12 items-center justify-center rounded-xl dark:!bg-gray-800"
-                      style={{ backgroundColor: `${color}26` }}
+                      className={`flex h-12 w-12 items-center justify-center rounded-xl ${
+                        neutral ? 'bg-ink/[0.06] dark:bg-bg/10' : 'dark:!bg-gray-800'
+                      }`}
+                      style={neutral ? undefined : { backgroundColor: `${color}26` }}
                     >
                       {Icon ? (
-                        <Icon className="text-xl" style={{ color }} />
+                        <Icon
+                          className={`text-xl ${neutral ? 'text-ink dark:text-bg' : ''}`}
+                          style={neutral ? undefined : { color }}
+                        />
                       ) : (
                         <span
                           className="font-space-mono text-xs font-bold"

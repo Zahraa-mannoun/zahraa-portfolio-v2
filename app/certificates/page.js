@@ -12,8 +12,10 @@ const cert3 = '/assets/certificates/cert3_semicolon_security_hackers.jpeg'
 const cert4 = '/assets/certificates/cert4_anthropic_claude101.png'
 const cert5 = '/assets/certificates/cert5_brinicle_ai_internship.png'
 const cert6 = '/assets/certificates/cert6_anthropic_claude_cowork.png'
+const cert7 = '/assets/certificates/cert7_fekrat_al_youm_internship.jpeg'
+const cert8 = '/assets/certificates/cert8_cedar_digital_ai_workshop.webp'
 
-const certificates = [cert1, cert2, cert3, cert4, cert5, cert6]
+const certificates = [cert1, cert2, cert3, cert4, cert5, cert6, cert7, cert8]
 
 const container = {
   hidden: {},
